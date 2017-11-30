@@ -2,7 +2,7 @@ This is a test for the git.
 ==
 firstly
 ----
-'''javascript
+```javascript
 var a = 0;
 console.log(a);
-'''
+```
