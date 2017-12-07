@@ -1,0 +1,397 @@
+应用服务器：sap1.vicp.cc
+系统编号：12
+系统标识：ER1
+user：tb66889695
+password：20170915
+
+请求：ER1K900129
+
+精确搜索：使用“”双引号包括起来
+站内搜索：something site:baidu.com
+排除搜索：something -others 显示排除others的something结果
+
+adjacent duplicates   相邻的重复记录
+
+周六18:00-周一10:00之间提交周报给方菲 fangfei@optimumchina.com
+
+http://168.0.1.6:9090  请假相关 账号：工号大写 密码：123
+
+软件 \\168.0.0.14
+
+smart forms设计：http://www.cnblogs.com/communist/p/6591122.html
+
+延伸倒也做过，在编程过程中，发现对某个函数或者表结构有疑惑，就回对其进行搜索，然后又发现相关联的其他函数等，往往会脱离本意
+
+ERP:Enterprise Resource Planning，企业资源计划
+ERP的发展阶段：
+1.MIS系统阶段(Management Information System)
+2.MRP阶段(Material Requirement Planning)
+3.MRP II阶段(Manufacture Resorce Planning)
+4.ERP阶段(Enterprise Resource Planning)
+5.电子商务时代的ERPzhainanfulishe.net
+
+BOM：物料清单，计算机可以识别的产品结构数据文件，也是ERP的主导文件
+
+MRP:Material Requirement Planning，物资需求计划
+
+国外知名ERP企业：SAP,Oracle,JDE,Baan,CA,Fourth Shift,QAD,Symix,SSA
+
+visio箭头拉伸问题，先定好连接点，ctrl键拖动端点
+
+subroutine 子程序
+OA：WTM26411 naiheyue
+
+现在的问题：注释（已解决）星号要放到行首。
+badi报错：业务加载项“Z_IF_CALC_VAT1”必须包含/扩展接口“IF_BADI_INTERFACE”（未解决
+mart forms数字显示问题(已解决) 文本编辑界面点击插入字段，输入变量即可。
+smart forms纵向表格线比横向的细的问题
+创建状态栏的问题
+
+创建状态栏 拷贝程序SAPLSLVC_FULLSCREEN的状态STANDARD_FULLSCREEN过来
+
+is initial 判断变量是否已初始化，如果结果为true，则未初始化
+
+
+定义数据类型用TYPES，定义数据对象用DATA
+
+客户命名空间包括所有具有前缀Y或Z的对象
+
+自定义对象必须为Y或Z开头
+
+输出语句里不能包含表达式，在变量前用'/'符号隔开表示换行输出
+
+小数的表示，'小数'.
+
+注释："*"星号整行注释，放到行的第一个位置；'"'双引号部分注释，放到行尾
+
+比较运算时，不要使用运算符号，而应该使用相应的字母来表示
+
+连接符"&"用来连接两个字符串
+
+常量必须定义为全局变量，不能在子程序中定义局部常量
+
+内置基本类型：C N T D I F P X（十六进制数） String XString（十六进制字符串）
+
+自定义类型：TYPES/DATA... TYPE 基本类型 TYPES/DATA ...LIKE 已声明的数据对象
+通过关键字 TYPES，自定义相关类型，然后在定义声明变量时，使用自定义的类型作为变量类型
+
+数据类型 字节字段X 文本域C IntegerI 浮点F 文本字符串STRING 打包数量P
+在输出变量后加 DECIMAL+数字，表示输出几位小数，EXPONENT 0表示常规小数 
+
+运算符与其他语言大体一致，只是说法有点差异。
+运算符与变量要以空格隔开
+
+定义变量并赋值 data(varian_name) = value .
+
+结构体定义：TYPES:BEGIN OF <name>,
+		  statements,
+	    END OF <name>.
+声明：	    DATA <fieldname> TYPE <name>.
+
+小括号要与里面的变量保持一个空格的距离 ( PARAMETERS )
+
+在时间变量里，日期的加减以天为单位，时间的的加减以秒为单位
+
+ABAP中，字典中的对象是全局的
+
+IF-ELSE:IF 判断条件.
+	   <statements>.
+	   ELSE.
+	    <statements>.
+	ENDIF.
+
+CHECK的用法
+1 循环中，判断条件不成立，跳出该次循环
+2 块中，判断条件不成立，直接跳出该块
+3 GET事件中
+
+FORM创建子程序，PERFORM调用子程序
+PERFORM fieldname.
+FORM <fieldname>.
+	statements.
+ENDFORM.
+
+事务码？？ SE38 编辑器
+
+ABAP的结构
+
+ABAP锁定对象，先发出锁定请求，然后转到Enqueue服务器，并在锁表中创建
+锁，Enqueue服务器设置锁定，并且程序最终准备好访问数据
+
+储存并启用，自动生成两个功能模块
+
+INCLUDE程序，定义 PROGRAM <fieldname>.  statements. 然后设置为INCLUDE类型
+	     调用 INCLUDE <fieldname>.
+
+APPEND操作可能会插入重复的记录，但是用唯一键添加重复记录时，会出错
+
+SKIP关键字，插入空白行
+
+创建对象步骤 引用类创建引用变量 DATA:<object_name> TYPE REF TO <class_name> 
+	       引用变量创建对象 CREATE Object:<object_name>.
+
+使用对象的一般步骤：1)定义类的声明与实现方法；
+	2)使用Data语句中的TYPE REF TO选项参照类型声明引用变量；
+	3)使用CREATE OBJECT语句创建对象；
+	4)通过-〉或=〉访问对象或类组件。
+
+成员类型：属性、方法、事件
+实例属性，用DATA定义，静态属性（类属性），用CLASS-DATA定义
+继承、多态
+
+对象的属性用"-"来访问(obj-attr)，方法用"->"来访问(obj->function)
+
+类中不允许定义带head line的内表
+
+METHODS、TYPES跟METHOD、TYPE的区别？
+
+类的定义：CLASS <classname> DEFINITION.
+	  .....   属性、方法、事件等
+	  ENDCLASS.
+
+派生类：CLASS <classname> DEFINITION ABATRACT.
+派生类中只需定义抽象方法，实现在子类中定义
+
+类的实现：CLASS <classname> IMPLEMENTATION.
+	  .....
+	  ENDCLASS.
+
+创建对象时，其构造函数就触发了？
+
+ME运算符，获取变量在改变之前的值
+
+继承：CLASS <subclass> DEFINITION INHEITING FROM <superclass>.
+
+接口：INTERFACE <interfacename>.
+      DATA....
+      METHODS....
+      ENDINTERFACE.
+
+对象事件,定义：FOR EVENT <eventname> OF <classname>.
+通过RAISE EVENT来触发对象事件
+只有输出参数的接口。SET HANDLER动态链接到其程序处理方法
+
+控制流以及数据流？？？
+
+内部表：行类型(line type)、主键(key)、表类型(table type)
+	line type:确定行中的字段和字段类型
+
+内部表的类型：Standard table，Sorted table，Hashed table
+	      Standard table:通过index访问记录。推荐index access访问
+	      Sorted table:数据按照table key排序。推荐key access访问
+	      Hashed table:只能通过key access访问
+index access:根据行号访问   key access:根据table key访问
+
+内部表的声明：DATA:BEGIN OF <tabname> Occurs 0,
+	      statements,
+	      END OF tabname.
+	创建：TYPES <tabname> TYPE|LIKE <tab_type> OF <line_type_tab>
+	      WITH <key> INITIAL SIZE <size_num>.
+
+内部表的复制：MOVE <table_field> TO <internal_tab_field>.
+	      MOVE-CORRESPONDING <table_name> TO <internal_tab>.//把一个
+	      表的相应记录复制到内部表里面
+
+内部表的删除：
+	    删除重复行：DELETE ADJACENT DUPLICATES FROM <tab>[COMPARING <comp>].
+	    删除重复行之前要进行排序，目的是为了让重复行排在一起
+	    DELETE TAB INDEX NUM.
+
+读取表：read table itab with key ziduan = 'value' .
+
+数据表读取到内表：SELECT * INTO CORRESPONDING FIELDS OF TABLE TA_SPFLI
+                  FROM SPELI UP TO 5 ROWS.  up to 5 rows读取5行数据
+内表转到工作区：LOOP AT TA_SPFLI INTO A_SPFLI.
+
+discribe table itab lines lin 读取itab的行数到lin中
+
+for all entries in 把前面所获取的数据作为查询条件，在当前的表进行查询
+
+数据表的创建问题：如果自定义的字段没法输入类型，点击预定义类型即可
+
+PBO处理屏幕生成前的逻辑，PAI处理屏幕生成后的逻辑
+
+屏幕字段名称要大写
+
+设置选择屏幕字段为必填：使用 obligatory 关键词；no-extension单值选择；no intervals 表示取消了区间，后面是一个箭头的形式
+
+ALV：SAP List Viewer
+
+tables声明数据表，当数据表字段需要作为条件，或插入到内表时
+
+sy-index用于do循环中，sy-tabix用于loop循环中
+
+i_save = 'A' . all types
+
+only 10.22 u can do it agin
+
+perform xxx using ... changing ... using后接在子程序中不会改变的变量，changing接会改变的变量
+
+perform xxx using value(...) changing ... 用value包裹起来的变量在子程序中改变后，不影响原来的值
+
+call function fn exporting ... importing ... exporting是程序传给function的参数，importing是function给程序的返回值
+
+读取数据表的字段写法：tab~字段名
+
+RETURNING:用来代替exporting、changing，不能同时使用
+
+RECEIVING:用来接收methods/class-methods中returning选项返回的值
+
+命名规范：
+LT_=Local internal table
+LS_=Local structure(work area)
+LR_=Local reference
+GT_=Global internal table
+GS_=Global structure(work area)
+GR_=Global reference
+
+Smart Forms：
+调用的表，在全局设置->表格接口->表 中定义，然后在要输出的表->数据 中使用。
+main窗口在 输出选项 中可设置窗口大小，table则在 表 中可设置宽度
+图形、窗口之类的可以随意拖动，开发者随其爱好摆放位置
+在程序中调用Smart Forms主要用到两个function：调用函数生成函数名称 function 'SSF_FUNCTION_MODULE_NAME'和调用form函数 function fm_name 。
+全局定义中要用到的变量，要在程序上面的输入、输出里填写声明
+表头的循环，自己独立建一个循环，如果没有表头循环的话，数据会显示不出来。
+
+给一个表添加一个序号的字段：循环这个表，然后 字段 = sy-tabix . modify itab .
+
+嵌套错误：程序结束之前，由“SELECT”引入的控制结构必须以“SELECT”结束 是因为SELECT语句into的时候缺少corresponding fields of table
+
+增强：
+一代：基于代码的增强  显示对象列表->子例程 查找 userexit开头的子程序
+二代：基于功能的增强  ECS  modsap
+三代：基于对象的增强
+四代：基于增强点增强
+
+salv:
+cl_salv_table=>factory(
+    importing r_salv_table = gr_table 
+    changing t_table = tt_data[] 
+) . 获取数据
+gr_table->display() . 展示表格
+
+一些常用的事务码：
+MM00：物料主记录
+MM01：创建一般物料
+MM02：改变物料
+MM03：显示物料
+MMZ1：旧的创建物料
+
+ALV相关：
+slis_fieldcat_alv layout属性
+zebra 使ALV表格按斑马线间隔条码方式显示 X-有，space-无
+edit 设置所有单元格可编辑 X-可编辑，space-不可编辑
+colwidth_optimize 优化列宽设置
+lvc_s_layo layout属性
+zebra 使ALV表格按斑马线间隔条码方式显示 X-有，space-没有
+edit 准备编辑 X-可编辑，space-不可编辑
+cwidth_opt 自动优化列宽 X-优化，space-不自动优化
+函数 REUSE_ALV_GRID_DISPLAY 和 REUSE_ALV_GRID_DISPLAY_LVC 的区别，后者能够精确到某一单元格的编辑，如果只是显示行列的话，二者的使用没用太大的区别
+
+REUSE_ALV_GRID_DISPLAY发生在END-OF-SELECTION事件之后
+
+定义内表时如果没有加上occurs 0 ，在loop循环时会报错
+
+tcode:se36 逻辑数据库的创建
+
+PNP中使用宏
+RP_PROVIDE_FROM_LAST 获取最后一条记录
+RP_PROVIDE_FROM_FRST 获取开头一条记录
+PNP-SW-FOUND为1时有记录，否则无记录
+
+join操作会根据选择屏幕输入的时间段，以及要选择的数据所出现的时间段划分为几个分段，显示其中的信息
+
+provide * from p0001 between pn-begda and endda .
+if p0001_valid = 'X' ."X代表有值
+
+Pnnnn是PAnnnn的子结构，结构类型一致
+
+权限检测，使用函数 HR_CHECK_AUTHORITY_INFTY.
+MOVE-CORRESPONDING P0001 TO ITAB .把从p0001表中读取到的数据存到itab表中
+如果PNP-SW-FOUND返回1，则为读取到数据，否则，未读取到数据
+
+collect的用法，collect itab1 into itab2 .非数值字段字段不同的情况下，跟append相同，当分数值字段相同的时候，相当于modify，同时把数值进行了汇总
+
+selecttion-screen begin of block bl01 with frame title text-01 .
+initialization .
+text-01 = '选择屏幕' .   这样会在选项头顶上显示标题
+
+表、类型池、变量（需要输出的数据、输出格式）、选择屏幕（默认值等）、**取数、展示
+
+
+
+get pernr .
+get payroll .
+loop at payroll-inter-rt into wa_rt .
+get pernr late ."index librorum prohibitorum
+
+读取组织架构函数
+call function 'RP_STRUC_GET'
+exporting
+act_otype = 'O'"评估类型 reference objec-otype
+act_objid = p_orgeh "单位 none
+act_wegid = 'O-O_DOWN' "评估路径 reference gdstr-wegid
+act_plvar = '01' "版本 reference objec-plvar
+act_begda = sy-datum "reference objec-begda
+act_endda = sy-datum "reference objec-endda
+tables
+result_object = tab_org1 "返回结果 reference objec
+result_struc = ''"reference struc
+result_tab = ''" reference swhactor
+exceptions
+no_plavar_found = 1
+no_entry_found = 2
+others = 3 .
+
+读取payroll工资单
+call function "PYXX_READ_PAYROLL_RESULT"
+exporting
+employeenumber = p0002-pernr
+sequencenumber = l_seque
+check_read_authority = 'X'
+changing
+payroll_result = l_py_result
+exceptions
+illegal_isocode_or_clusterid = 1
+error_generating_importing = 2
+import_mismatch_error = 3 
+subpool_dir_full = 4
+no_read_authority = 5
+no_record_found = 6
+versions_do_not_match = 7
+error_reading_archieve = 8 
+error_reading_relid = 9
+others = 10 .
+
+selection-screen pushbutton <len> <buttonname> user-command <ucommname> [modif id]
+
+数据选择期间 pnpbegda pnpendda   个人选择期间 pnpbegps pnpendps
+组织架构 pnporgeh，此为一个表结构，有sign,option,low,high等字段
+
+
+move-corresponding a to b ."只能把一行数据转移过去，因此常用的用法为:
+loop at a .
+    move-corresponding a to b .
+    append b .
+endloop .
+
+at selection-screen .处理选择屏幕输入条件
+at selection-screen output .处理PBO事件，在屏幕调用前触发，使得无需输出即可判断
+
+leave list-processing,如果在at selection-screen则返回输出界面，如果在start-of-selection则返回到initialization事件
+
+lines(obj) 返回obj的行数，常用于序号等
+
+指针 filed-symbols使用assigning或assign用来赋值，在使用指针前，要使用 <fieldsymbol> is assigning 来进行是否有值的判断
+
+P-S-O-O p代表员工，s代表岗位，o代表部门，部门可以有多个，岗位只能有一个
+
+split variant at " " into variant1 variant2 ... 把variant按某个字符分割成若干部分
+
+1.先定义一个内表 it_tab ，用来存放要展示的数据
+2.使用RH_STRUC_GET函数获取result_struc，根据result_struc中level字段来判断部门
+3.循环result_struc内表，将相应的字段存到it_tab中；在该循环中，还可以获取其他表的数据，存放到it_tab中(select single xxx from tab where tab-yyy = it_tab-yyy)
+4.将it_tab内表展示到ALV中
+
+1.查看入职统计、员工花名册报表的代码
+2.使用read table进行内表操作
